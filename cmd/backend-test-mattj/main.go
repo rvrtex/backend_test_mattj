@@ -1,33 +1,33 @@
 package main
 
 import (
-	"net/http"
+	"github.com/rvrtex/backend_test_mattj/api/server"
 
 	"github.com/gin-gonic/gin"
 )
 
-type album struct {
-	ID     string  `json:"id"`
-	Title  string  `json:"title"`
-	Artist string  `json:"artist"`
-	Price  float64 `json:"price"`
-}
+/*
+	type album struct {
+		ID     string  `json:"id"`
+		Title  string  `json:"title"`
+		Artist string  `json:"artist"`
+		Price  float64 `json:"price"`
+	}
 
-var albums = []album{
-	{ID: "1", Title: "Blue Train", Artist: "John Coltrane", Price: 56.99},
-	{ID: "2", Title: "Jeru", Artist: "Gerry Mulligan", Price: 17.99},
-	{ID: "3", Title: "Sarah Vaughan and Clifford Brown", Artist: "Sarah Vaughan", Price: 39.99},
-}
+	var albums = []album{
+		{ID: "1", Title: "Blue Train", Artist: "John Coltrane", Price: 56.99},
+		{ID: "2", Title: "Jeru", Artist: "Gerry Mulligan", Price: 17.99},
+		{ID: "3", Title: "Sarah Vaughan and Clifford Brown", Artist: "Sarah Vaughan", Price: 39.99},
+	}
+*/
 
 func main() {
 	router := gin.Default()
-	router.GET("/person", getPerson)
-	router.GET("/person/:id", getPersonByID)
-	router.POST("/person", postPerson)
-
+	server.Routes(router)
 	router.Run(":8080")
 }
 
+/*
 func postPerson(c *gin.Context) {
 	var newAlbum album
 
@@ -55,3 +55,4 @@ func getPerson(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, albums)
 
 }
+*/
