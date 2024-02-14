@@ -1,4 +1,4 @@
-module Repos/backend_test_mattj
+module github.com/rvrtex/backend_test_mattj
 
 go 1.20
 
