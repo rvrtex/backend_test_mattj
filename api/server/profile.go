@@ -9,16 +9,23 @@ import (
 func Routes(route *gin.Engine) {
 	profile := route.Group("/profile")
 	{
-		profile.GET("/", getProfile)
+		profile.GET("/:id", getProfile)
 	}
 
 }
 
 func getProfile(ctx *gin.Context) {
 
-	profile := backendTestMattj.Profile{}
-	profile.GetProfile(ctx)
+	singleProfile := &backendTestMattj.Profile{}
+	singleProfile, err := singleProfile.GetProfile(ctx)
+	if err != nil {
+		ctx.JSON(500, gin.H{
+			"message": err,
+		})
+		return
+	}
+
 	ctx.JSON(200, gin.H{
-		"message": profile,
+		"payload": singleProfile,
 	})
 }
