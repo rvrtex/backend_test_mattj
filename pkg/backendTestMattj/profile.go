@@ -47,8 +47,7 @@ func (p *Profile) Validate() error {
 		validation.Field(&p.PhoneNumberPrimary, validation.Required),
 		validation.Field(&p.City, validation.Required, validation.Length(1, 100)),
 		validation.Field(&p.StateProvince, validation.Required, validation.Length(1, 100)),
-		validation.Field(&p.ZipCode, validation.Required, validation.Length(1, 100))
-
+		validation.Field(&p.ZipCode, validation.Required, validation.Length(1, 100)),
 }
 
 func (p *Profile) GetProfile() error {

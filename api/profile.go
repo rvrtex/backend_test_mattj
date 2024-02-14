@@ -7,9 +7,7 @@ import (
 )
 
 func Routes(route *gin.Engine) {
-	route.GET("/profile", getProfile)
-	route.GET("/person/:id", getPersonByID)
-	route.POST("/person", postPerson)
+
 }
 
 func getProfile(ctx *gin.Context, params backendTestMattj.Profile) {
