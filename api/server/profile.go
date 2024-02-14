@@ -26,6 +26,6 @@ func getProfile(ctx *gin.Context) {
 	}
 
 	ctx.JSON(200, gin.H{
-		"payload": singleProfile,
+		"profile": singleProfile,
 	})
 }
