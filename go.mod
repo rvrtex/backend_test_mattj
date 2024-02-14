@@ -1,4 +1,4 @@
-module Repos/backend_test_mattj
+module github.com/rvrtex/backend_test_mattj
 
 go 1.20
 
@@ -35,4 +35,5 @@ require (
 	golang.org/x/text v0.14.0 // indirect
 	google.golang.org/protobuf v1.32.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
+	
 )

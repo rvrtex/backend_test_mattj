@@ -1,7 +1,7 @@
 package server
 
 import (
-	"github.com/backend_test_mattj/pkg/backendTestMattj"
+	"github.com/rvrtex/backend_test_mattj/pkg/backendTestMattj"
 
 	"github.com/gin-gonic/gin"
 )
